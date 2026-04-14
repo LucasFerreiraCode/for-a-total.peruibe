@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academia Força Total | Musculação e Artes Marciais em Peruíbe</title>
+  <meta name="description" content="Academia Força Total em Peruíbe - Musculação, Artes Marciais e Funcional. Equipamentos modernos, profissionais qualificados. Nota 4.7 no Google.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo-link">
+        <img src="assets/logo-forca-total.jpg" alt="Logo Academia Força Total" class="logo-img">
+        <span class="logo-text">Força <span class="highlight">Total</span></span>
+      </a>
+      <nav class="nav-desktop">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#modalidades">Modalidades</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a href="https://wa.me/5513997001182" target="_blank" rel="noopener noreferrer" class="btn btn-primary header-cta">Agende seu treino</a>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="mobileNav">
+      <a href="#inicio" onclick="toggleMenu()">Início</a>
+      <a href="#sobre" onclick="toggleMenu()">Sobre</a>
+      <a href="#modalidades" onclick="toggleMenu()">Modalidades</a>
+      <a href="#avaliacoes" onclick="toggleMenu()">Avaliações</a>
+      <a href="#contato" onclick="toggleMenu()">Contato</a>
+      <a href="https://wa.me/5513997001182" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="text-align:center;margin-top:8px;">Agende seu treino</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <img src="assets/hero-gym.jpg" alt="Interior da Academia Força Total" class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-stars">
+        <span class="stars">★★★★★</span>
+        <span class="stars-label">4.7 (247 avaliações)</span>
+      </div>
+      <img src="assets/logo-forca-total.jpg" alt="Logo" class="hero-logo">
+      <h1>Academia <span class="highlight">Força Total</span></h1>
+      <p class="hero-subtitle">Musculação e Artes Marciais em Peruíbe</p>
+      <p class="hero-address">📍 Av. Padre Leonardo Nunes, 436 - Centro, Peruíbe - SP</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/5513997001182" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Fale pelo WhatsApp</a>
+        <a href="#sobre" class="btn btn-secondary">Conheça a academia</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="about">
+    <div class="container">
+      <h2>Força e <span class="highlight">Harmonia</span></h2>
+      <div class="about-grid">
+        <div class="about-image-wrap">
+          <img src="assets/about-gym.jpg" alt="Interior da academia" class="about-img">
+          <div class="about-badge">
+            <span class="about-badge-number">27</span>
+            <span class="about-badge-label">Anos</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <p>Há mais de duas décadas, a <strong>Academia Força Total</strong> tem sido referência em fitness e bem-estar em Peruíbe. Nossa missão é proporcionar uma experiência completa de transformação física e mental.</p>
+          <p>Combinamos equipamentos de última geração com profissionais altamente qualificados, criando um ambiente onde cada aluno recebe atenção personalizada para alcançar seus objetivos.</p>
+          <p class="about-highlight">Resultados reais, cuidado personalizado e evolução contínua</p>
+          <p>– isso é o que nos move todos os dias.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALIDADES -->
+  <section id="modalidades" class="modalities">
+    <div class="container">
+      <h2>Nossas <span class="highlight">Modalidades</span></h2>
+      <div class="mod-grid">
+        <div class="mod-card">
+          <div class="mod-image-wrap">
+            <img src="assets/mod-musculacao.jpg" alt="Musculação" loading="lazy">
+            <div class="mod-icon">🏋️</div>
+          </div>
+          <div class="mod-body">
+            <h3>Musculação</h3>
+            <p>Equipamentos de última geração e treinos personalizados para todos os níveis. Acompanhamento profissional para garantir sua evolução constante.</p>
+            <ul>
+              <li>Aparelhos modernos</li>
+              <li>Treino personalizado</li>
+              <li>Acompanhamento profissional</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mod-card">
+          <div class="mod-image-wrap">
+            <img src="assets/mod-artes-marciais.jpg" alt="Artes Marciais" loading="lazy">
+            <div class="mod-icon">🥋</div>
+          </div>
+          <div class="mod-body">
+            <h3>Artes Marciais</h3>
+            <p>Desenvolva disciplina, condicionamento físico e técnicas de defesa pessoal com instrutores experientes e qualificados.</p>
+            <ul>
+              <li>Instrutores qualificados</li>
+              <li>Diversas modalidades</li>
+              <li>Para todos os níveis</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mod-card">
+          <div class="mod-image-wrap">
+            <img src="assets/mod-funcional.jpg" alt="Funcional" loading="lazy">
+            <div class="mod-icon">🔥</div>
+          </div>
+          <div class="mod-body">
+            <h3>Funcional</h3>
+            <p>Treinos dinâmicos e intensos para melhorar seu condicionamento, resistência e queima de calorias.</p>
+            <ul>
+              <li>Alta intensidade</li>
+              <li>Resultados rápidos</li>
+              <li>Treinos em grupo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVALIAÇÕES -->
+  <section id="avaliacoes" class="reviews">
+    <div class="container">
+      <div class="reviews-header">
+        <div class="reviews-score">
+          <span class="score-number">4.7</span>
+          <span class="stars">★★★★★</span>
+        </div>
+        <p class="reviews-count">247 avaliações no Google</p>
+        <h2>O que nossos alunos dizem</h2>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-quote">❝</div>
+          <p>"Professores muito atenciosos e educados, todo mundo limpando os aparelhos após o uso. Foi a melhor decisão que tomei!"</p>
+          <div class="review-footer">
+            <span class="review-name">Renata Souza</span>
+            <span class="stars small">★★★★★</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-quote">❝</div>
+          <p>"Atendimento monstro, tem todos os aparelhos e equipamentos. Em Peruíbe só treino na Força Total, a academia melhor de todas."</p>
+          <div class="review-footer">
+            <span class="review-name">Gisely De Souza Cruz</span>
+            <span class="stars small">★★★★★</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-quote">❝</div>
+          <p>"Academia com ótimos profissionais, ótimos aparelhos, energia boa e muito treino."</p>
+          <div class="review-footer">
+            <span class="review-name">Aluno Verificado</span>
+            <span class="stars small">★★★★★</span>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-quote">❝</div>
+          <p>"Já faço parte dessa família há 3 anos, espaço amplo, academia nota 10."</p>
+          <div class="review-footer">
+            <span class="review-name">Aluno Verificado</span>
+            <span class="stars small">★★★★★</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="contact">
+    <div class="container">
+      <h2>Entre em <span class="highlight">Contato</span></h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <h3>Endereço</h3>
+          <p>Av. Padre Leonardo Nunes, 436<br>Centro, Peruíbe - SP<br>11770-352</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📱</div>
+          <h3>Telefone / WhatsApp</h3>
+          <a href="https://wa.me/5513997001182" target="_blank" rel="noopener noreferrer">(13) 99700-1182</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🕐</div>
+          <h3>Horário</h3>
+          <p>Seg a Sex: 06h - 23h<br>Sáb e Feriados: 07h - 13h</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/logo-forca-total.jpg" alt="Logo Academia Força Total" class="footer-logo">
+        <div>
+          <p class="footer-title">Força <span class="highlight">Total</span></p>
+          <p class="footer-desc">Treinos de musculação, artes marciais e funcional com atenção personalizada em Peruíbe.</p>
+        </div>
+      </div>
+
+      <div class="footer-actions">
+        <p class="footer-label">Acompanhe</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/totalforca" target="_blank" rel="noopener noreferrer">📷 @totalforca</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <span class="footer-copy">&copy; 2026 Academia Força Total. Todos os direitos reservados.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
