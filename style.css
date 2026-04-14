@@ -59,7 +59,8 @@ body {
 
 @media (max-width: 768px) {
   .nav-desktop, .header-cta { display: none; }
-  .menu-toggle { display: flex; }
+  .header-inner { justify-content: center; position: relative; }
+  .menu-toggle { display: flex; position: absolute; right: 16px; top: 50%; transform: translateY(-50%); }
   .nav-mobile.open { display: block; }
 }
 
