@@ -46,6 +46,7 @@ body {
 }
 .logo-link { display: flex; align-items: center; gap: 8px; text-decoration: none; }
 .logo-img { height: 40px; width: 40px; border-radius: 50%; object-fit: cover; }
+.header-logo-img { height: 36px; width: 36px; border-radius: 50%; object-fit: cover; }
 .logo-text { font-size: 1.25rem; font-weight: 700; color: var(--fg); }
 .nav-desktop { display: flex; gap: 32px; }
 .nav-desktop a { color: var(--fg-muted); text-decoration: none; font-size: .875rem; font-weight: 500; transition: color .2s; }
@@ -70,8 +71,8 @@ body {
 .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,.95) 0%, rgba(0,0,0,.85) 100%); }
 .hero-content { position: relative; z-index: 2; max-width: 640px; padding: 128px 0 64px; }
 .hero-stars { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; }
-.stars { color: var(--primary); font-size: 1rem; letter-spacing: 2px; }
-.stars.small { font-size: .75rem; }
+.stars { color: #FFD700; font-size: 1.2rem; letter-spacing: 3px; filter: drop-shadow(0 0 4px #FFD700); }
+.stars.small { font-size: .85rem; filter: drop-shadow(0 0 3px #FFD700); }
 .stars-label { font-size: .875rem; color: var(--fg-muted); }
 .hero-logo { height: 80px; width: 80px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,217,0,.5); margin-bottom: 16px; }
 .hero h1 { font-size: clamp(2.5rem, 5vw, 3.75rem); font-weight: 800; line-height: 1.1; margin-bottom: 16px; }
@@ -231,14 +232,109 @@ body {
 
 @media (max-width: 480px) {
   .header-inner { padding: 12px; }
+  .header-logo-img { height: 28px; width: 28px; }
   .logo-text { font-size: 1rem; }
   .nav-mobile a { font-size: .825rem; }
   .hero-content { padding-top: 64px; }
-  .hero h1 { font-size: 2.3rem; }
-  .hero-subtitle { font-size: 1rem; }
+  .hero h1 { font-size: 2rem; }
+  .hero-subtitle { font-size: 0.95rem; }
+  .hero-address { font-size: 0.75rem; }
   .hero-buttons { gap: 12px; }
-  .btn { padding: 12px 20px; }
-  .about, .modalities, .reviews, .contact { padding: 72px 0; }
-  .footer { padding: 36px 0 20px; }
-  .footer-copy { font-size: .82rem; }
+  .btn { padding: 12px 20px; font-size: 0.9rem; }
+  .about, .modalities, .reviews, .contact, .app-section { padding: 60px 0; }
+  .about h2, .modalities h2, .reviews h2, .contact h2, .app-text h2 { font-size: 1.5rem; margin-bottom: 40px; }
+  .about-grid { gap: 24px; }
+  .about-img { height: 280px; }
+  .about-badge { padding: 8px 14px; bottom: 12px; left: 12px; }
+  .about-badge-number { font-size: 1.5rem; }
+  .about-badge-label { font-size: .75rem; }
+  .about-text p { font-size: 0.9rem; }
+  .app-grid { gap: 24px; }
+  .app-card { padding: 20px; }
+  .app-card-body { gap: 12px; }
+  .app-feature { font-size: 0.9rem; }
+  .mod-card { margin-bottom: 16px; }
+  .mod-image-wrap { height: 180px; }
+  .mod-body { padding: 16px; }
+  .mod-body h3 { font-size: 1.1rem; }
+  .mod-body p, .mod-body li { font-size: 0.8rem; }
+  .reviews-grid { gap: 16px; }
+  .review-card { padding: 16px; }
+  .review-avatar { width: 44px; height: 44px; font-size: 1.25rem; }
+  .review-card p { font-size: 0.85rem; }
+  .review-name { font-size: .8rem; }
+  .score-number { font-size: 2.5rem; }
+  .reviews-count { font-size: .8rem; }
+  .contact-grid { gap: 16px; }
+  .contact-card { padding: 16px; }
+  .contact-icon { font-size: 1.5rem; margin-bottom: 12px; }
+  .contact-card h3 { font-size: 1rem; }
+  .contact-card p { font-size: 0.8rem; }
+  .footer { padding: 32px 0 16px; }
+  .footer-logo { height: 48px; width: 48px; }
+  .footer-title { font-size: 1rem; }
+  .footer-desc { font-size: 0.85rem; max-width: 280px; }
+  .footer-label { font-size: 0.75rem; }
+  .footer-social a { width: 36px; height: 36px; font-size: 0.9rem; }
+  .footer-copy { font-size: .75rem; }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .header-inner { padding: 16px; }
+  .header-logo-img { height: 32px; width: 32px; }
+  .logo-text { font-size: 1.1rem; }
+  .hero h1 { font-size: 2.4rem; }
+  .hero-subtitle { font-size: 1.05rem; }
+  .hero-buttons { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+  .hero-buttons .btn { flex: 1 1 calc(50% - 8px); max-width: 200px; }
+  .about h2, .modalities h2, .reviews h2, .contact h2, .app-text h2 { margin-bottom: 48px; }
+  .about-img { height: 320px; }
+  .mod-grid { gap: 20px; }
+  .mod-image-wrap { height: 200px; }
+  .reviews-grid { grid-template-columns: 1fr; max-width: 500px; }
+  .contact-grid { grid-template-columns: 1fr; max-width: 400px; }
+  .footer-inner { gap: 24px; }
+  .footer-brand { min-width: auto; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container { padding: 0 24px; }
+  .nav-desktop { gap: 20px; }
+  .nav-desktop a { font-size: .8rem; }
+  .hero h1 { font-size: 3rem; }
+  .hero-subtitle { font-size: 1.15rem; }
+  .about-grid { gap: 32px; }
+  .about-img { height: 360px; }
+  .app-grid { gap: 24px; }
+  .app-text p { font-size: 0.95rem; }
+  .mod-grid { gap: 24px; }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); max-width: 700px; }
+  .contact-grid { grid-template-columns: repeat(2, 1fr); max-width: 600px; }
+  .footer-inner { gap: 24px; }
+  .footer-brand { gap: 12px; min-width: 220px; }
+  .footer-logo { height: 52px; width: 52px; }
+  .footer-desc { max-width: 300px; font-size: 0.9rem; }
+}
+
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .container { max-width: 1100px; }
+  .hero-content { max-width: 600px; }
+  .about-grid { max-width: 900px; gap: 40px; }
+  .app-grid { max-width: 1000px; }
+  .mod-grid { max-width: 850px; }
+  .reviews-grid { max-width: 950px; }
+  .contact-grid { max-width: 750px; }
+}
+
+@media (min-width: 1367px) {
+  .hero-content { max-width: 700px; }
+  .hero h1 { font-size: 4rem; }
+}
+
+/* TOUCH DEVICES OPTIMIZATION */
+@media (hover: none) and (pointer: coarse) {
+  .btn { min-height: 48px; }
+  .nav-mobile a { padding: 16px 0; }
+  .menu-toggle { padding: 8px; }
+  .whatsapp-btn { width: 60px; height: 60px; }
 }
