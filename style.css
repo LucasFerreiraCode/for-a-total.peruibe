@@ -11,13 +11,14 @@
   --radius: 12px;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
   background: #000000;
   color: var(--fg);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
@@ -252,6 +253,7 @@ body {
 .reviews-action { display: flex; justify-content: center; margin-top: 40px; }
 .reviews-action .btn { padding: 14px 36px; font-size: 1rem; }
 .reviews-action .btn i { font-size: 1.1rem; }
+.reviews-action .btn { white-space: normal; text-align: center; }
 .review-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; display: grid; gap: 16px; }
 .review-header { display: flex; align-items: center; gap: 12px; }
 .review-avatar { width: 48px; height: 48px; border-radius: 50%; background: rgba(255,217,0,.12); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--primary); border: 1px solid rgba(255,217,0,.2); flex-shrink: 0; }
@@ -367,6 +369,8 @@ body {
   .review-card p { font-size: 0.85rem; }
   .score-number { font-size: 2.5rem; }
   .reviews-count { font-size: .8rem; }
+  .reviews-action { margin-top: 24px; }
+  .reviews-action .btn { padding: 12px 20px; font-size: 0.8rem; }
   .contact-grid { gap: 16px; }
   .contact-card { padding: 16px; }
   .contact-icon { font-size: 1.5rem; margin-bottom: 12px; }
