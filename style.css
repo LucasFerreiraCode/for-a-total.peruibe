@@ -83,7 +83,7 @@ body {
 
 /* ABOUT */
 .about { padding: 96px 0; background: #000000; border-bottom: 1px solid rgba(255,255,255,.05); }
-.about h2, .modalities h2, .plans h2, .reviews h2, .contact h2, .instructors h2 {
+.about h2, .modalities h2, .plans h2, .reviews h2, .contact h2, .instructors h2, .nutrition h2 {
   font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 700; text-align: center; margin-bottom: 64px;
 }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; max-width: 960px; margin: 0 auto; }
@@ -117,9 +117,166 @@ body {
 .instructor-name { font-size: 1.25rem; font-weight: 700; margin-bottom: 4px; color: var(--fg); }
 .instructor-role { font-size: .875rem; color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
 
+/* NUTRITION */
+.nutrition { padding: 96px 0; background: #000000; border-bottom: 1px solid rgba(255,255,255,.05); }
+.nutrition-subtitle { text-align: center; color: var(--fg-muted); margin-bottom: 48px; font-size: 1rem; }
+
+.nutrition-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto 48px;
+}
+
+.nutrition-text-side {
+  padding-right: 24px;
+}
+
+.nutrition-intro {
+  font-size: 1.125rem;
+  color: var(--fg);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.nutrition-list {
+  list-style: none;
+  display: grid;
+  gap: 16px;
+}
+
+.nutrition-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  color: var(--fg);
+  padding: 12px 16px;
+  background: rgba(255,255,255,.03);
+  border-radius: 8px;
+  border-left: 3px solid var(--primary);
+}
+
+.nutrition-check {
+  color: var(--primary);
+  font-size: 1.25rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.nutrition-image-side {
+  display: flex;
+  justify-content: center;
+}
+
+.nutrition-image-wrap {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 24px;
+  border: 2px solid rgba(255,217,0,.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: border-color .3s, box-shadow .3s;
+  overflow: hidden;
+}
+
+.nutrition-image-wrap:hover {
+  border-color: rgba(255,217,0,.6);
+  box-shadow: 0 12px 40px rgba(255, 217, 0, 0.2);
+}
+
+.nutrition-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s;
+}
+
+.nutrition-image-wrap:hover .nutrition-img {
+  transform: scale(1.02);
+}
+
+.nutrition-footer {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.nutrition-footer p {
+  color: var(--fg-muted);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+.nutrition-footer strong {
+  color: var(--primary);
+}
+
 @media (max-width: 768px) {
-  .instructors-grid { grid-template-columns: 1fr; }
-  .instructor-image-wrap { height: 400px; }
+  .nutrition-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .nutrition-text-side {
+    padding-right: 0;
+    order: 2;
+  }
+  
+  .nutrition-image-side {
+    order: 1;
+  }
+  
+  .nutrition-image-wrap {
+    max-width: 100%;
+  }
+  
+  .nutrition-img {
+    height: 280px;
+  }
+  
+  .nutrition-intro {
+    font-size: 1rem;
+  }
+  
+  .nutrition-list li {
+    font-size: .9375rem;
+    padding: 10px 14px;
+  }
+}
+
+/* NUTRITION */
+.nutrition { padding: 96px 0; background: #000000; border-bottom: 1px solid rgba(255,255,255,.05); }
+.nutrition-subtitle { text-align: center; color: var(--fg-muted); margin-bottom: 48px; font-size: 1rem; }
+.nutrition-image-wrap {
+  max-width: 600px; margin: 0 auto 48px;
+  border-radius: 24px;
+  border: 2px solid rgba(255,217,0,.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: border-color .3s, box-shadow .3s;
+  overflow: hidden;
+}
+.nutrition-image-wrap:hover {
+  border-color: rgba(255,217,0,.6);
+  box-shadow: 0 12px 40px rgba(255, 217, 0, 0.2);
+}
+.nutrition-img {
+  width: 100%; height: 300px; object-fit: cover;
+  display: block; transition: transform .3s;
+}
+.nutrition-image-wrap:hover .nutrition-img {
+  transform: scale(1.02);
+}
+.nutrition-text { text-align: center; max-width: 700px; margin: 0 auto; }
+.nutrition-text p { color: var(--fg-muted); line-height: 1.8; }
+
+@media (max-width: 768px) {
+  .nutrition-image-wrap { margin-bottom: 32px; max-width: 400px; }
+  .nutrition-img { height: 250px; }
 }
 
 /* APP */
