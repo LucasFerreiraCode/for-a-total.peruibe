@@ -20,20 +20,21 @@
 
   <!-- HEADER -->
   <header id="header">
+    <div class="scroll-progress" id="scrollProgress"></div>
     <div class="container header-inner">
       <a href="#inicio" class="logo-link">
         <img src="assets/logo-forca-total.jpg" alt="Logo Academia Força Total" class="header-logo-img">
         <span class="logo-text">Força <span class="highlight">Total</span></span>
       </a>
       <nav class="nav-desktop">
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#modalidades">Modalidades</a>
-        <a href="#planos">Planos</a>
-        <a href="#avaliacoes">Avaliações</a>
-        <a href="#contato">Contato</a>
+        <a href="#inicio" class="nav-link">Início</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#modalidades" class="nav-link">Modalidades</a>
+        <a href="#planos" class="nav-link">Planos</a>
+        <a href="#avaliacoes" class="nav-link">Avaliações</a>
+        <a href="#contato" class="nav-link">Contato</a>
       </nav>
-      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">
+      <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -54,34 +55,42 @@
   <section id="inicio" class="hero">
     <img src="assets/amarelo.vivido.png" alt="Interior da Academia Força Total" class="hero-bg">
     <div class="hero-overlay"></div>
+    <div class="hero-particles" id="heroParticles"></div>
     <div class="container hero-content">
       <div class="hero-stars">
       </div>
-      <h1>Transforme seu corpo na <span class="highlight">Força Total</span></h1>
-      <p class="hero-subtitle">Transforme seu corpo e sua saúde com acompanhamento profissional.</p>
-      <p class="hero-address">📍 Av. Padre Leonardo Nunes, 436 - Centro, Peruíbe - SP</p>
-      <div class="hero-buttons">
+      <h1 class="reveal">Transforme seu corpo na <span class="highlight animated-gradient">Força Total</span></h1>
+      <p class="hero-subtitle reveal reveal-delay-1">Transforme seu corpo e sua saúde com acompanhamento profissional.</p>
+      <p class="hero-address reveal reveal-delay-2">📍 Av. Padre Leonardo Nunes, 436 - Centro, Peruíbe - SP</p>
+      <div class="hero-buttons reveal reveal-delay-3">
         <a href="https://wa.me/5513997001182?text=Olá!%20Vi%20o%20site%20da%20academia%20e%20tenho%20interesse%20em%20começar.%20Gostaria%20de%20agendar%20uma%20aula%20experimental.%20Como%20posso%20fazer?"
-          target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fas fa-fire"></i>&nbsp;&nbsp;Aula
+          target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-glow"><i class="fas fa-fire"></i>&nbsp;&nbsp;Aula
           experimental gratuita</a>
         <a href="#sobre" class="btn btn-secondary">Conheça a academia</a>
       </div>
     </div>
   </section>
 
+  <!-- WAVE DIVIDER -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path d="M0,64 C360,120 1080,0 1440,64 L1440,120 L0,120 Z" fill="#000000"/>
+    </svg>
+  </div>
+
   <!-- SOBRE -->
   <section id="sobre" class="about">
     <div class="container">
-      <h2>Força e <span class="highlight">Harmonia</span></h2>
+      <h2 class="reveal">Força e <span class="highlight">Harmonia</span></h2>
       <div class="about-grid">
-        <div class="about-image-wrap">
-          <img src="assets/aluno.professores.jpeg" alt="Aluno com professores" class="about-img">
+        <div class="about-image-wrap reveal reveal-left">
+          <img src="assets/aluno.professores.jpeg" alt="Aluno com professores" class="about-img" loading="lazy" decoding="async">
           <div class="about-badge">
-            <span class="about-badge-number">27</span>
+            <span class="about-badge-number" data-count="27">0</span>
             <span class="about-badge-label">Anos</span>
           </div>
         </div>
-        <div class="about-text">
+        <div class="about-text reveal reveal-right">
           <p>Há mais de duas décadas, a <strong>Academia Força Total</strong> tem sido referência em fitness e bem-estar
             em Peruíbe. Nossa missão é proporcionar uma experiência completa de transformação física e mental.</p>
           <p>Aqui você encontra equipamentos de qualidade e profissionais preparados para te ajudar a conquistar
@@ -96,11 +105,11 @@
   <!-- MODALIDADES -->
   <section id="modalidades" class="modalities">
     <div class="container">
-      <h2>Nossas <span class="highlight">Modalidades</span></h2>
+      <h2 class="reveal">Nossas <span class="highlight">Modalidades</span></h2>
       <div class="mod-grid">
-        <div class="mod-card">
+        <div class="mod-card reveal reveal-up">
           <div class="mod-image-wrap">
-            <img src="assets/academia.foto.baixo.png" alt="Musculação" loading="lazy">
+            <img src="assets/academia.foto.baixo.png" alt="Musculação" loading="lazy" decoding="async">
           </div>
           <div class="mod-body">
             <h3>Musculação</h3>
@@ -114,9 +123,9 @@
             </ul>
           </div>
         </div>
-        <div class="mod-card">
+        <div class="mod-card reveal reveal-up reveal-delay-1">
           <div class="mod-image-wrap">
-            <img src="assets/Ringue.png" alt="Artes Marciais" loading="lazy">
+            <img src="assets/Ringue.png" alt="Artes Marciais" loading="lazy" decoding="async">
           </div>
           <div class="mod-body">
             <h3>Artes Marciais</h3>
@@ -137,16 +146,16 @@
   <!-- PROFESSORES -->
   <section id="professores" class="instructors">
     <div class="container">
-      <h2>Nossos <span class="highlight">Professores</span></h2>
-      <p class="instructors-subtitle">Equipe qualificada pronta para te orientar</p>
+      <h2 class="reveal">Nossos <span class="highlight">Professores</span></h2>
+      <p class="instructors-subtitle reveal">Equipe qualificada pronta para te orientar</p>
 
-      <div class="instructor-slider">
+      <div class="instructor-slider reveal reveal-up">
         <div class="instructor-slides">
           <div class="instructor-slide active">
-            <img src="assets/Professores.1.jpeg" alt="Professor 1" class="slide-img">
+            <img src="assets/Professores.1.jpeg" alt="Professor 1" class="slide-img" loading="lazy" decoding="async">
           </div>
           <div class="instructor-slide">
-            <img src="assets/professores.2.png" alt="Professor 2" class="slide-img">
+            <img src="assets/professores.2.png" alt="Professor 2" class="slide-img" loading="lazy" decoding="async">
           </div>
         </div>
         <button class="slider-btn prev" onclick="changeSlide(-1)" aria-label="Anterior">
@@ -166,11 +175,11 @@
   <!-- NUTRIÇÃO -->
   <section id="nutricao" class="nutrition">
     <div class="container">
-      <h2>Nutrição <span class="highlight">Esportiva</span></h2>
-      <p class="nutrition-subtitle">Acompanhamento nutricional especializado para maximizar seus resultados</p>
+      <h2 class="reveal">Nutrição <span class="highlight">Esportiva</span></h2>
+      <p class="nutrition-subtitle reveal">Acompanhamento nutricional especializado para maximizar seus resultados</p>
 
       <div class="nutrition-content">
-        <div class="nutrition-text-side">
+        <div class="nutrition-text-side reveal reveal-left">
           <p class="nutrition-intro">Nossos nutricionistas desenvolvem planos alimentares personalizados, considerando
             suas necessidades, objetivos e rotina.</p>
           <ul class="nutrition-list">
@@ -192,15 +201,15 @@
             </li>
           </ul>
         </div>
-        <div class="nutrition-image-side">
+        <div class="nutrition-image-side reveal reveal-right">
           <div class="nutrition-image-wrap">
             <img src="assets/Nutricionista.png" alt="Nossos Nutricionistas - Tatiana Leão e Dr. Leonardo"
-              class="nutrition-img">
+              class="nutrition-img" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
 
-      <div class="nutrition-footer">
+      <div class="nutrition-footer reveal">
         <p>Com o acompanhamento da <strong>Tatiana Leão</strong> e do <strong>Dr. Leonardo</strong>, você terá
           resultados mais rápidos e sustentáveis, transformando seu corpo com saúde e bem-estar.</p>
       </div>
@@ -211,7 +220,7 @@
   <section id="app" class="app-section">
     <div class="container">
       <div class="app-grid">
-        <div class="app-text">
+        <div class="app-text reveal reveal-left">
           <h2>App para <span class="highlight">Alunos</span></h2>
           <p>Os nossos alunos também têm acesso ao app da academia para acompanhar treinos, verificar horários e ver
             todas as orientações dos professores diretamente no celular.</p>
@@ -223,7 +232,7 @@
           <div class="app-buttons">
           </div>
         </div>
-        <div class="app-card">
+        <div class="app-card reveal reveal-right">
           <div class="app-card-inner">
             <div class="app-card-body">
               <p>Seu treino, seus resultados e sua rotina em um só lugar.</p>
@@ -240,10 +249,10 @@
   <!-- PLANOS -->
   <section id="planos" class="plans">
     <div class="container">
-      <h2>Nossos <span class="highlight">Planos</span></h2>
-      <p class="plans-subtitle">Escolha o plano ideal para você.</p>
+      <h2 class="reveal">Nossos <span class="highlight">Planos</span></h2>
+      <p class="plans-subtitle reveal">Escolha o plano ideal para você.</p>
       <div class="plans-grid">
-        <div class="plan-card">
+        <div class="plan-card reveal reveal-up">
           <h3 class="plan-title">Mensal</h3>
           <div class="plan-price-container">
             <div class="plan-price">R$100<span>,00</span></div>
@@ -260,7 +269,8 @@
             target="_blank" rel="noopener noreferrer" class="plan-btn">Começar Agora <span
               class="plan-arrow">→</span></a>
         </div>
-        <div class="plan-card">
+        <div class="plan-card featured reveal reveal-up reveal-delay-1">
+          <div class="plan-badge">Mais Popular</div>
           <h3 class="plan-title">Trimestral</h3>
           <div class="plan-price-container">
             <div class="plan-installment">3x de</div>
@@ -280,7 +290,7 @@
             target="_blank" rel="noopener noreferrer" class="plan-btn">Começar Agora <span
               class="plan-arrow">→</span></a>
         </div>
-        <div class="plan-card">
+        <div class="plan-card reveal reveal-up reveal-delay-2">
           <h3 class="plan-title">Semestral</h3>
           <div class="plan-price-container">
             <div class="plan-installment">6x de</div>
@@ -308,16 +318,15 @@
   <!-- AVALIAÇÕES -->
   <section id="avaliacoes" class="reviews">
     <div class="container">
-      <div class="reviews-header">
+      <div class="reviews-header reveal">
         <div class="reviews-score">
-          <span class="score-number">4.7</span>
+          <span class="score-number" data-count="4.7">0</span>
           <span class="stars">★★★★★</span>
         </div>
-        <p class="reviews-count">247 avaliações no Google</p>
         <h2>O que nossos alunos dizem</h2>
       </div>
       <div class="reviews-grid">
-        <div class="review-card">
+        <div class="review-card reveal reveal-up">
           <div class="review-header">
             <div class="review-avatar">👤</div>
             <span class="review-name">Renata Souza</span>
@@ -330,7 +339,7 @@
             <span class="stars small">★★★★★</span>
           </div>
         </div>
-        <div class="review-card">
+        <div class="review-card reveal reveal-up reveal-delay-1">
           <div class="review-header">
             <div class="review-avatar">👤</div>
             <span class="review-name">Gisely De Souza Cruz</span>
@@ -342,7 +351,7 @@
             <span class="stars small">★★★★★</span>
           </div>
         </div>
-        <div class="review-card">
+        <div class="review-card reveal reveal-up reveal-delay-2">
           <div class="review-header">
             <div class="review-avatar">👤</div>
             <span class="review-name">Renata Lara Alves</span>
@@ -353,7 +362,7 @@
             <span class="stars small">★★★★★</span>
           </div>
         </div>
-        <div class="review-card">
+        <div class="review-card reveal reveal-up">
           <div class="review-header">
             <div class="review-avatar">👤</div>
             <span class="review-name">Gabriel Sanches</span>
@@ -365,7 +374,7 @@
             <span class="stars small">★★★★★</span>
           </div>
         </div>
-        <div class="review-card">
+        <div class="review-card reveal reveal-up reveal-delay-1">
           <div class="review-header">
             <div class="review-avatar">👤</div>
             <span class="review-name">Espaço Isabele Solano</span>
@@ -377,7 +386,7 @@
             <span class="stars small">★★★★★</span>
           </div>
         </div>
-        <div class="review-card">
+        <div class="review-card reveal reveal-up reveal-delay-2">
           <div class="review-header">
             <div class="review-avatar">👤</div>
             <span class="review-name">Sheila Souza</span>
@@ -390,9 +399,9 @@
           </div>
         </div>
       </div>
-      <div class="reviews-action">
+      <div class="reviews-action reveal">
         <a href="https://www.google.com/maps/search/Academia+Força+Total+Peruíbe" target="_blank"
-          rel="noopener noreferrer" class="btn btn-primary">
+          rel="noopener noreferrer" class="btn btn-primary btn-glow">
           <i class="fab fa-google"></i>&nbsp;&nbsp;Ver todas as 247 avaliações no Google
         </a>
       </div>
@@ -402,14 +411,14 @@
   <!-- CONTATO -->
   <section id="contato" class="contact">
     <div class="container">
-      <h2>Entre em <span class="highlight">Contato</span></h2>
+      <h2 class="reveal">Entre em <span class="highlight">Contato</span></h2>
       <div class="contact-grid">
-        <div class="contact-card">
+        <div class="contact-card reveal reveal-up">
           <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
           <h3>Endereço</h3>
           <p>Av. Padre Leonardo Nunes, 436<br>Centro, Peruíbe - SP<br>11770-352</p>
         </div>
-        <div class="contact-card">
+        <div class="contact-card reveal reveal-up reveal-delay-1">
           <div class="contact-icon"><i class="fas fa-phone"></i></div>
           <h3>Telefone / WhatsApp</h3>
           <p>(13) 99700-1182</p>
@@ -419,7 +428,7 @@
             </a>
           </div>
         </div>
-        <div class="contact-card">
+        <div class="contact-card reveal reveal-up reveal-delay-2">
           <div class="contact-icon"><i class="fas fa-clock"></i></div>
           <h3>Horário</h3>
           <p>Seg a Sex: 06h - 23h<br>Sáb e Feriados: 07h - 13h</p>
@@ -432,7 +441,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="assets/logo-forca-total.jpg" alt="Logo Academia Força Total" class="footer-logo">
+        <img src="assets/logo-forca-total.jpg" alt="Logo Academia Força Total" class="footer-logo" loading="lazy" decoding="async">
         <div>
           <p class="footer-title">Força <span class="highlight">Total</span></p>
           <p class="footer-desc">Treinos de musculação e artes marciais com atenção personalizada em Peruíbe.
@@ -444,9 +453,9 @@
         <p class="footer-label">Acompanhe em nossas redes sociais</p>
         <div class="footer-social">
           <a href="https://www.instagram.com/totalforca" target="_blank" rel="noopener noreferrer" class="social-icon"
-            title="Instagram"><i class="fab fa-instagram"></i></a>
+            title="Instagram" aria-label="Acessar nosso Instagram"><i class="fab fa-instagram"></i></a>
           <a href="https://www.facebook.com/share/18bcFiNQwK/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"
-            class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            class="social-icon" title="Facebook" aria-label="Acessar nosso Facebook"><i class="fab fa-facebook-f"></i></a>
         </div>
       </div>
     </div>
@@ -458,13 +467,19 @@
     </div>
   </footer>
 
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
   <script src="script.js"></script>
 
   <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/5513997001182?text=Olá!%20Vi%20o%20site%20da%20academia%20e%20tenho%20interesse%20em%20começar.%20Gostaria%20de%20agendar%20uma%20aula%20experimental.%20Como%20posso%20fazer?"
-    target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Fale conosco no WhatsApp">
+    target="_blank" rel="noopener noreferrer" class="whatsapp-btn" title="Fale conosco no WhatsApp" aria-label="Fale conosco no WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
+
 </body>
 
 </html>
